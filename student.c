@@ -22,29 +22,6 @@ struct student
 
 //  highespercentage from students
 
-void highestPercentage(struct student *head)
-{
-    struct student *temp, *topper;
-
-    temp = head;
-    topper = head;
-
-    while(temp != NULL)
-    {
-        if(temp->percentage > topper->percentage)
-        {
-            topper = temp;
-        }
-
-        temp = temp->next;
-    }
-
-    printf("\n\nTopper Student Details:\n");
-
-    printf("\nRoll No: %d", topper->roll);
-    printf("\nName: %s", topper->name);
-    printf("\nPercentage: %.2f", topper->percentage);
-}
 
 // students above 75
 void above75(struct student *head)
@@ -158,22 +135,7 @@ void deleteAtEnd(struct student **head)
 }
 
 // count function used for counting how many link list are there 
-void countStudents(struct student *head)
-{
-    struct student *temp;
-    int count = 0;
 
-    temp = head;
-
-    while(temp != NULL)
-    {
-        count++;
-
-        temp = temp->next;
-    }
-
-    printf("\nTotal Students = %d\n", count);
-}
 
 // search function used for searching a astudent 
 
@@ -316,36 +278,7 @@ void deleteStudent(struct student **head)
 
 // student pass or fail list function 
 
-void passStudents(struct student *head)
-{
-    struct student *temp;
-    int found = 0;
 
-    temp = head;
-
-    printf("\n\nPassed Students List:\n");
-
-    while(temp != NULL)
-    {
-        if(temp->percentage >= 36)
-        {
-            printf("\nRoll No: %d", temp->roll);
-            printf("\nName: %s", temp->name);
-            printf("\nPercentage: %.2f", temp->percentage);
-
-            printf("\n-------------------");
-
-            found = 1;
-        }
-
-        temp = temp->next;
-    }
-
-    if(found == 0)
-    {
-        printf("\nNo Students Passed!\n");
-    }
-}
 
 // fai students list 
 void failStudents(struct student *head)
