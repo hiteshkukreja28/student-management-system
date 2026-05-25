@@ -21,6 +21,30 @@ struct student
 };
 
 //  highespercentage from students
+void highestPercentage(struct student *head)
+{
+    struct student *temp, *topper;
+
+    temp = head;
+    topper = head;
+
+    while(temp != NULL)
+    {
+        if(temp->percentage > topper->percentage)
+        {
+            topper = temp;
+        }
+
+        temp = temp->next;
+    }
+
+    printf("\n\nTopper Student Details:\n");
+
+    printf("\nRoll No: %d", topper->roll);
+    printf("\nName: %s", topper->name);
+    printf("\nPercentage: %.2f", topper->percentage);
+}
+
 
 
 // students above 75
@@ -440,14 +464,14 @@ int main()
      functioncalling for students above 75 percent
          above75(head);
     
-//     // //functioncalling to search a student 
-//      searchStudent(head);
+//functioncalling to search a student 
+   searchStudent(head);
 
-//     // functioncalling for  list of student passed
-//     passStudents(head);
+//functioncalling for  list of student passed
+    passStudents(head);
 
-//     //functioncalling for list of student failed
-//      failStudents(head);  
+//functioncalling for list of student failed
+    failStudents(head);  
 
   updateStudent(head);
     
