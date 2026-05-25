@@ -459,9 +459,9 @@ int main()
     insertAtEnd(&head);
 
 
-     function calling for highest percentage
+     //function calling for highest percentage
      highestPercentage(head);
-     functioncalling for students above 75 percent
+     //functioncalling for students above 75 percent
          above75(head);
     
 //functioncalling to search a student 
