@@ -299,6 +299,40 @@ void deleteStudent(struct student **head)
 
 // student pass or fail list function 
 
+void passStudents(struct student *head)
+{
+    struct student *temp;
+    int found = 0;
+
+    temp = head;
+
+    printf("\n\nPassed Students List:\n");
+
+    while(temp != NULL)
+    {
+        if(temp->percentage >= 36)
+        {
+            printf("\nRoll No: %d", temp->roll);
+            printf("\nName: %s", temp->name);
+            printf("\nPercentage: %.2f", temp->percentage);
+
+            printf("\n-------------------");
+
+            found = 1;
+        }
+
+        temp = temp->next;
+    }
+
+    if(found == 0)
+    {
+        printf("\nNo Students Passed!\n");
+    }
+} 
+
+
+
+
 
 
 // fai students list 
@@ -396,9 +430,9 @@ int main()
     }
 
 //     //insert at end
-//      insertAtEnd(&head);
-//    insertAtEnd(&head);
-//   insertAtEnd(&head);
+     insertAtEnd(&head);
+    insertAtEnd(&head);
+    insertAtEnd(&head);
 
 
      function calling for highest percentage
