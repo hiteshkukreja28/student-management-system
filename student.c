@@ -136,6 +136,27 @@ void deleteAtEnd(struct student **head)
 
 // count function used for counting how many link list are there 
 
+void countStudents(struct student *head)
+{
+    struct student *temp;
+    int count = 0;
+
+    temp = head;
+
+    while(temp != NULL)
+    {
+        count++;
+
+        temp = temp->next;
+    }
+
+    printf("\nTotal Students = %d\n", count);
+}
+
+
+
+
+
 
 // search function used for searching a astudent 
 
@@ -380,10 +401,10 @@ int main()
 //   insertAtEnd(&head);
 
 
-//     // function calling for highest percentage
-//      highestPercentage(head);
-//     //functioncalling for students above 75 percent
-//      above75(head);
+     function calling for highest percentage
+     highestPercentage(head);
+     functioncalling for students above 75 percent
+         above75(head);
     
 //     // //functioncalling to search a student 
 //      searchStudent(head);
